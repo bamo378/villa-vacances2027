@@ -1,104 +1,146 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vacances Août 2027</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-body { font-family: Arial, sans-serif; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vacances août 2027</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-slate-950 text-slate-900">
+  <div class="min-h-screen bg-[radial-gradient(circle_at_top_left,#fed7aa,transparent_32%),radial-gradient(circle_at_top_right,#bfdbfe,transparent_30%),linear-gradient(180deg,#f8fafc,#eef2ff)]">
+    <header class="sticky top-0 z-30 border-b border-white/50 bg-white/75 backdrop-blur-xl">
+      <div class="mx-auto max-w-7xl px-4 py-4 md:px-8 md:py-5 flex items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-[0.24em] text-orange-500">Sélection villas</div>
+          <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-950">Vacances août 2027</h1>
+          <p class="mt-1 text-sm md:text-base text-slate-500">Comparateur privé du groupe avec carte, filtres et annonces.</p>
+        </div>
+        <a href="https://www.google.com/maps/d/edit?mid=1kXHmsrOPJyxVTqDLzTe4ETW3aipv7KY&usp=sharing" target="_blank" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-xl hover:-translate-y-0.5 transition-transform">
+          Ouvrir la carte ↗
+        </a>
+      </div>
+    </header>
 
-<div class="max-w-6xl mx-auto p-4">
-  <div class="bg-white rounded-3xl shadow-sm p-6 mb-4">
-    <h1 class="text-4xl font-bold">☀️ Vacances août 2027</h1>
-    <p class="text-slate-500 mt-2">Comparateur villas du groupe</p>
+    <main class="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">
+      <section class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="overflow-hidden rounded-[36px] border border-white/70 bg-white/80 shadow-2xl backdrop-blur">
+          <div class="flex items-center justify-between gap-3 border-b border-slate-100 p-5">
+            <div>
+              <div class="flex items-center gap-2 text-lg font-black">🗺️ Carte Google du groupe</div>
+              <div class="text-sm text-slate-500">Sur smartphone, le bouton “Ouvrir la carte” est souvent plus fiable que l’intégration.</div>
+            </div>
+            <a href="https://www.google.com/maps/d/edit?mid=1kXHmsrOPJyxVTqDLzTe4ETW3aipv7KY&usp=sharing" target="_blank" class="rounded-2xl bg-orange-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-orange-600 transition-colors">
+              Ouvrir
+            </a>
+          </div>
+          <iframe title="Carte Google My Maps" src="https://www.google.com/maps/d/embed?mid=1kXHmsrOPJyxVTqDLzTe4ETW3aipv7KY&ehbc=2E312F" class="h-[420px] w-full border-0 md:h-[620px]"></iframe>
+        </div>
+
+        <aside class="rounded-[36px] border border-white/70 bg-white/85 p-5 shadow-2xl backdrop-blur lg:sticky lg:top-28 h-fit">
+          <div class="mb-5 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Résumé</div>
+              <div class="text-3xl font-black">16 villas</div>
+            </div>
+            <div class="rounded-3xl bg-slate-950 p-4 text-white shadow-xl">🏡</div>
+          </div>
+          <div class="grid grid-cols-3 gap-3 text-center text-sm">
+            <button onclick="setCountry('France')" class="rounded-3xl bg-blue-50 p-4"><div class="text-2xl font-black text-blue-700">8</div><div class="text-slate-500">France</div></button>
+            <button onclick="setCountry('Italie')" class="rounded-3xl bg-emerald-50 p-4"><div class="text-2xl font-black text-emerald-700">5</div><div class="text-slate-500">Italie</div></button>
+            <button onclick="setCountry('Espagne')" class="rounded-3xl bg-rose-50 p-4"><div class="text-2xl font-black text-rose-700">3</div><div class="text-slate-500">Espagne</div></button>
+          </div>
+          <div class="mt-5 rounded-3xl bg-gradient-to-br from-slate-950 to-slate-700 p-5 text-white">
+            <div class="text-sm text-white/60">Budget min / max</div>
+            <div class="mt-1 text-2xl font-black">CHF 6’455 – 18’873</div>
+            <div class="mt-3 text-sm text-white/70">Les données proviennent du récapitulatif et des liens fournis.</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="mt-8 rounded-[36px] border border-white/70 bg-white/85 shadow-2xl backdrop-blur overflow-hidden">
+        <div class="border-b border-slate-100 p-5 md:p-6">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xl font-black">🔎 Comparatif complet</div>
+              <p class="mt-1 text-sm text-slate-500">Toutes les villas sont listées ici. Les boutons “Voir l’annonce” sont cliquables et ouvrent les liens dans un nouvel onglet.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+              <input id="search" oninput="render()" placeholder="Rechercher" class="w-full rounded-2xl border border-slate-200 bg-white py-3 px-4 text-sm outline-none focus:ring-2 focus:ring-orange-200" />
+              <select id="country" onchange="render()" class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-orange-200">
+                <option>Tous</option><option>France</option><option>Italie</option><option>Espagne</option>
+              </select>
+              <select id="sort" onchange="render()" class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-orange-200">
+                <option value="prix">Trier par prix</option><option value="pays">Trier par pays</option><option value="trajet">Trier par trajet</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="cards" class="grid gap-4 p-4 md:grid-cols-2 xl:grid-cols-3 md:p-6"></div>
+      </section>
+    </main>
   </div>
 
-  <div class="bg-white rounded-3xl overflow-hidden shadow-sm mb-4">
-    <div class="p-4 border-b">
-      <div class="font-semibold text-lg">🗺️ Carte Google du groupe</div>
-      <p class="text-sm text-slate-500">Clique directement sur “Agrandir la carte”</p>
-    </div>
+<script>
+const villas = [{"nom": "Carpentras", "pays": "France", "prix": 14445, "prixTxt": "CHF 14’445", "trajet": "5h30", "mer": "env. 1h30", "details": "17 chambres • 37 lits • 8 SDB", "lieu": "Carpentras, France", "by": "Sarah", "lien": ""}, {"nom": "Villa Ravano - Gello", "pays": "Italie", "prix": 14536, "prixTxt": "CHF 14’536", "trajet": "6h30", "mer": "env. 25 min", "details": "16 chambres • 25 lits • 11 SDB", "lieu": "Gello, Italie", "by": "Arnaud", "lien": "https://www.airbnb.fr/rooms/1431243676194952595?unique_share_id=00c13791-0bcc-4099-8ffe-a0cd6de08b0a&viralityEntryPoint=1&s=76"}, {"nom": "Domaine Verrerie - Durfort", "pays": "France", "prix": 14088, "prixTxt": "CHF 14’088", "trajet": "6h00", "mer": "env. 3h", "details": "14 chambres • 21 lits • 12 SDB", "lieu": "Durfort, France", "by": "Arnaud", "lien": "https://www.booking.com/Share-ZEv9YR"}, {"nom": "Château Benedetti - Guardistallo", "pays": "Italie", "prix": 10423, "prixTxt": "CHF 10’423", "trajet": "7h00", "mer": "env. 15 min", "details": "18 chambres • 15 lits • 19 SDB", "lieu": "Guardistallo, Italie", "by": "Arnaud", "lien": "https://www.abritel.fr/location-vacances/p2207767"}, {"nom": "Holiday Home S. Giuseppe - Lecchiore", "pays": "Italie", "prix": 6455, "prixTxt": "CHF 6’455", "trajet": "6h00", "mer": "env. 25 min", "details": "9 chambres • 30 lits • SDB à vérifier", "lieu": "Lecchiore, Italie", "by": "Florian", "lien": "https://www.hometogo.ch/rental/0d1e902d09f7565e443369fff58d1f9f"}, {"nom": "Agriturismo Villa Rosselmini - Calci", "pays": "Italie", "prix": 8831, "prixTxt": "CHF 8’831", "trajet": "6h45", "mer": "env. 25 min", "details": "14 chambres • 19 lits • 10 SDB", "lieu": "Calci, Italie", "by": "Florian", "lien": "https://www.airbnb.fr/rooms/37214746?unique_share_id=8ec9e691-883c-47a2-9e53-b7b291972b6d&viralityEntryPoint=1&s=76"}, {"nom": "Masia Luxmarspa - Tordera", "pays": "Espagne", "prix": 12861, "prixTxt": "CHF 12’861", "trajet": "8h30", "mer": "env. 15 min", "details": "12 chambres • 28 lits • 11 SDB", "lieu": "Tordera, Espagne", "by": "Florian", "lien": "https://www.booking.com/Share-GfatLf"}, {"nom": "Villa Torroella de Fluvia", "pays": "Espagne", "prix": 7452, "prixTxt": "CHF 7’452", "trajet": "7h45", "mer": "env. 10 min", "details": "12 chambres • 25 lits • 12 SDB", "lieu": "Torroella de Fluvia, Espagne", "by": "Florian", "lien": "https://www.abritel.fr/location-vacances/p3791846a"}, {"nom": "San Giuseppe par Interhome - Valloria", "pays": "Italie", "prix": 7026, "prixTxt": "CHF 7’026", "trajet": "6h00", "mer": "env. 25 min", "details": "9 chambres • 15 lits • SDB à vérifier", "lieu": "Valloria, Italie", "by": "Florian", "lien": "https://fr.airbnb.ch/rooms/34212522?unique_share_id=d555f638-c3e9-4294-bddd-3e755a589139&viralityEntryPoint=1&s=76"}, {"nom": "La Californian Villa - Mougins", "pays": "France", "prix": 18873, "prixTxt": "CHF 18’873", "trajet": "7h00", "mer": "env. 20 min", "details": "10 chambres • 9 SDB", "lieu": "Mougins, France", "by": "Cinzia", "lien": "https://www.airbnb.fr/rooms/15978219?unique_share_id=68ee9d8e-5220-4d63-b300-e78b8471dba7&viralityEntryPoint=1&s=76"}, {"nom": "La maison de Rêve - Roquefort-les-Pins", "pays": "France", "prix": 7200, "prixTxt": "CHF 7’200", "trajet": "7h00", "mer": "env. 25 min", "details": "10 chambres • 21 personnes max • 7 SDB", "lieu": "Roquefort-les-Pins, France", "by": "Cinzia", "lien": "https://www.abritel.fr/location-vacances/p1869438a"}, {"nom": "Château - Palau-del-Vidre", "pays": "France", "prix": 8500, "prixTxt": "CHF 8’500", "trajet": "7h30", "mer": "env. 10 min", "details": "10 chambres • 25 personnes • 10 SDB", "lieu": "Palau-del-Vidre, France", "by": "Nicolas", "lien": "https://www.airbnb.fr/rooms/1278120339339138708?unique_share_id=9519633c-fba5-4a85-b065-e059089967d6&viralityEntryPoint=1&s=76"}, {"nom": "Villa - Hyères", "pays": "France", "prix": 11900, "prixTxt": "CHF 11’900", "trajet": "6h45", "mer": "bord de mer", "details": "12 chambres • 24 personnes • SDB à vérifier", "lieu": "Hyères, France", "by": "Nicolas", "lien": "https://www.abritel.fr/location-vacances/p1015349a"}, {"nom": "Le Caselle 26 - Arezzo", "pays": "Italie", "prix": 12180, "prixTxt": "CHF 12’180", "trajet": "8h00", "mer": "env. 1h45", "details": "13 chambres • 26 lits • 13 SDB", "lieu": "Arezzo, Italie", "by": "Nadine", "lien": "https://emmavillas.com/en/tuscany/le-caselle-26/2027-08-07/2027-08-14?Adults=24"}, {"nom": "Mas Saint Antoine - Bourg-Saint-Andéol", "pays": "France", "prix": 10000, "prixTxt": "CHF 10’000", "trajet": "4h45", "mer": "env. 2h30", "details": "38 personnes • chambres/SDB à vérifier", "lieu": "Bourg-Saint-Andéol, France", "by": "Alexandre", "lien": "https://www.grandsgites.com/gite-07-mas-st-antoine-4729.htm"}, {"nom": "Villa touristique - Arenys de Mar", "pays": "Espagne", "prix": 10875, "prixTxt": "CHF 10’875", "trajet": "8h45", "mer": "bord de mer", "details": "10 chambres • 31 lits • 5 SDB", "lieu": "Arenys de Mar, Espagne", "by": "Samantha", "lien": "https://www.booking.com/Share-jAL4i5"}];
+const styles = {
+  France: { badge: "bg-blue-50 text-blue-700", dot: "bg-blue-500 ring-blue-100" },
+  Italie: { badge: "bg-emerald-50 text-emerald-700", dot: "bg-emerald-500 ring-emerald-100" },
+  Espagne: { badge: "bg-rose-50 text-rose-700", dot: "bg-rose-500 ring-rose-100" }
+};
 
-    <iframe
-      src="https://www.google.com/maps/d/embed?mid=1kXHmsrOPJyxVTqDLzTe4ETW3aipv7KY&ehbc=2E312F"
-      width="100%"
-      height="550"
-      style="border:0;">
-    </iframe>
-  </div>
+function setCountry(country) {
+  document.getElementById('country').value = country;
+  render();
+}
 
-  <div class="grid md:grid-cols-2 gap-4">
+function trajetNumber(t) {
+  const m = String(t).match(/(\d+)/);
+  return m ? parseInt(m[1]) : 99;
+}
 
-    <div class="bg-white rounded-3xl shadow-sm p-5 border-l-8 border-green-600">
-      <h2 class="text-xl font-bold">🏡 Villa Ravano - Gello</h2>
-      <p class="text-slate-500">Italie</p>
-      <div class="mt-4 space-y-2 text-sm">
-        <div>💰 CHF 14’536</div>
-        <div>🛏️ 16 chambres • 25 lits • 11 SDB</div>
-        <div>🚗 6h30 depuis Bulle</div>
-        <div>🌊 25 min de la mer</div>
-      </div>
-      <a href="https://www.airbnb.fr/rooms/1431243676194952595?unique_share_id=00c13791-0bcc-4099-8ffe-a0cd6de08b0a&viralityEntryPoint=1&s=76"
-         target="_blank"
-         class="inline-block mt-4 bg-black text-white px-4 py-2 rounded-xl">
-         Voir l’annonce
-      </a>
-    </div>
+function render() {
+  const country = document.getElementById('country').value;
+  const sort = document.getElementById('sort').value;
+  const search = document.getElementById('search').value.toLowerCase();
+  let list = villas.filter(v => (country === "Tous" || v.pays === country));
+  if (search) list = list.filter(v => (v.nom + " " + v.lieu + " " + v.by).toLowerCase().includes(search));
+  if (sort === "prix") list.sort((a,b) => a.prix - b.prix);
+  if (sort === "pays") list.sort((a,b) => a.pays.localeCompare(b.pays));
+  if (sort === "trajet") list.sort((a,b) => trajetNumber(a.trajet) - trajetNumber(b.trajet));
 
-    <div class="bg-white rounded-3xl shadow-sm p-5 border-l-8 border-red-600">
-      <h2 class="text-xl font-bold">🏡 Masia Luxmarspa - Tordera</h2>
-      <p class="text-slate-500">Espagne</p>
-      <div class="mt-4 space-y-2 text-sm">
-        <div>💰 CHF 12’861</div>
-        <div>🛏️ 12 chambres • 28 lits • 11 SDB</div>
-        <div>🚗 8h30 depuis Bulle</div>
-        <div>🌊 15 min de la mer</div>
-      </div>
-      <a href="https://www.booking.com/Share-GfatLf"
-         target="_blank"
-         class="inline-block mt-4 bg-black text-white px-4 py-2 rounded-xl">
-         Voir l’annonce
-      </a>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-sm p-5 border-l-8 border-blue-600">
-      <h2 class="text-xl font-bold">🏡 Villa - Hyères</h2>
-      <p class="text-slate-500">France</p>
-      <div class="mt-4 space-y-2 text-sm">
-        <div>💰 CHF 11’900</div>
-        <div>🛏️ 12 chambres • 24 personnes</div>
-        <div>🚗 6h45 depuis Bulle</div>
-        <div>🌊 Bord de mer</div>
-      </div>
-      <a href="https://www.abritel.fr/location-vacances/p1015349a"
-         target="_blank"
-         class="inline-block mt-4 bg-black text-white px-4 py-2 rounded-xl">
-         Voir l’annonce
-      </a>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-sm p-5 border-l-8 border-green-600">
-      <h2 class="text-xl font-bold">🏡 Le Caselle 26 - Arezzo</h2>
-      <p class="text-slate-500">Italie</p>
-      <div class="mt-4 space-y-2 text-sm">
-        <div>💰 CHF 12’180</div>
-        <div>🛏️ 13 chambres • 26 lits • 13 SDB</div>
-        <div>🚗 8h00 depuis Bulle</div>
-        <div>🌊 1h45 de la mer</div>
-      </div>
-      <a href="https://emmavillas.com/en/tuscany/le-caselle-26/2027-08-07/2027-08-14?Adults=24"
-         target="_blank"
-         class="inline-block mt-4 bg-black text-white px-4 py-2 rounded-xl">
-         Voir l’annonce
-      </a>
-    </div>
-
-  </div>
-</div>
-
+  document.getElementById('cards').innerHTML = list.map(v => {
+    const s = styles[v.pays];
+    const link = v.lien
+      ? `<a href="${v.lien}" target="_blank" rel="noreferrer" class="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-slate-950 px-4 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-[1.02]">Voir l’annonce ↗</a>`
+      : `<button disabled class="flex-1 rounded-2xl bg-slate-200 px-4 py-3 text-sm font-bold text-slate-500">Lien à compléter</button>`;
+    return `
+      <article class="group rounded-[30px] border border-slate-100 bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="mb-4 flex items-start justify-between gap-3">
+          <div>
+            <span class="inline-flex rounded-full ${s.badge} px-3 py-1 text-xs font-bold">${v.pays}</span>
+            <h2 class="mt-3 text-xl font-black leading-tight text-slate-950">🏡 ${v.nom}</h2>
+            <p class="mt-1 text-sm text-slate-500">${v.lieu}</p>
+          </div>
+          <span class="h-4 w-4 rounded-full ${s.dot} ring-8"></span>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <div class="rounded-2xl bg-slate-50 p-3"><div class="text-slate-400">💰 Prix</div><div class="font-black">${v.prixTxt}</div></div>
+          <div class="rounded-2xl bg-slate-50 p-3"><div class="text-slate-400">🚗 Trajet</div><div class="font-black">${v.trajet}</div></div>
+          <div class="rounded-2xl bg-slate-50 p-3"><div class="text-slate-400">🌊 Mer</div><div class="font-black">${v.mer}</div></div>
+          <div class="rounded-2xl bg-slate-50 p-3"><div class="text-slate-400">👤 Proposé</div><div class="font-black">${v.by}</div></div>
+        </div>
+        <div class="mt-3 rounded-2xl bg-slate-50 p-3 text-sm">
+          <div class="mb-1 text-slate-400">🛏️ Capacité</div>
+          <div class="font-bold text-slate-800">${v.details}</div>
+        </div>
+        <div class="mt-5 flex gap-2">
+          ${link}
+          <button class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-600 shadow-sm hover:bg-slate-50">♡</button>
+        </div>
+      </article>`;
+  }).join('');
+}
+render();
+</script>
 </body>
 </html>
